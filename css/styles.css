@@ -104,3 +104,23 @@ i{
 span{
     color: #EE3939;
 }
+
+.herobtn{
+    height: 70px;
+    width: 210px;
+    background-color: #EE3939;
+    margin-top: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: Outfit;
+    font-size: 20px;
+    box-shadow: 0px 0px 20px 0px #EE3939;
+}
+
+.herobtn a{
+    color: #fff;
+    text-decoration: none;
+}

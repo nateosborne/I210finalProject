@@ -20,9 +20,13 @@ require_once 'includes/header.php'
             <div class="heroimg"></div>
             <div class="herotxt">
                 <h1>The ultimate <br><span>Hip Hop</span> Pack.</h1>
+                <div class="herobtn"><a href="">MORE</a></div>
             </div>
+
         </div>
     </div>
+
+    <div class="packs"><a href="">PACKS</a></div>
 </div>
 
 </body>
