@@ -10,8 +10,8 @@
 <div class="nav">
     <div class="logo"></div>
     <div class="links">
-        <a href="">Home</a>
-        <a href="">Packs</a>
+        <a href="home.php">Home</a>
+        <a href="listpacks.php">Packs</a>
         <a href="">Contact</a>
     </div>
     <div class="icons">

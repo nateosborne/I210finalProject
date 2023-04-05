@@ -1,6 +1,6 @@
 <?php
 
-require_once 'includes/header.php'
+require_once 'includes/header.php';
 
 ?>
 
@@ -26,7 +26,7 @@ require_once 'includes/header.php'
         </div>
     </div>
 
-    <div class="packs"><a href="">PACKS</a></div>
+    <div class="packs"><a href="listpacks.php">PACKS</a></div>
 </div>
 
 </body>
