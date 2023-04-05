@@ -1,4 +1,7 @@
 <?php
+
+require_once 'includes/header.php'
+
 ?>
 
 <!DOCTYPE html>
@@ -11,17 +14,14 @@
 </head>
 <body>
 
-<div class="nav">
-    <div class="logo"></div>
-    <div class="links">
-        <a href="">Home</a>
-        <a href="">Packs</a>
-        <a href="">Contact</a>
-    </div>
-    <div class="icons">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <i class="fa-solid fa-circle-user"></i>
-        <i class="fa-solid fa-bag-shopping"></i>
+<div class="home">
+    <div class="hero">
+        <div class="herocontainer">
+            <div class="heroimg"></div>
+            <div class="herotxt">
+                <h1>The ultimate <br><span>Hip Hop</span> Pack.</h1>
+            </div>
+        </div>
     </div>
 </div>
 

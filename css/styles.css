@@ -61,3 +61,46 @@ i{
     font-size: 30px;
     color: #BFBFBF;
 }
+
+.home{
+    height: 1500px;
+}
+
+.hero{
+    height: 650px;
+    background-image: radial-gradient(#262626, #0C0C0C);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.herocontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+}
+
+.heroimg{
+    height: 400px;
+    width: 230px;
+    background-repeat: no-repeat;
+    background-image: url("../images/astro-box_1200x1200.webp");
+    background-size: 100%;
+}
+
+.herotxt{
+    height: 300px;
+    width: 600px;
+}
+
+.herotxt h1{
+    font-family: Outfit;
+    font-size: 80px;
+    color: #fff;
+    line-height: 85px;
+}
+
+span{
+    color: #EE3939;
+}
