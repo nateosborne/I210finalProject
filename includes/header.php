@@ -8,7 +8,7 @@
 </head>
 
 <div class="nav">
-    <div class="logo"></div>
+    <a href="home.php"><div class="logo"></div></a>
     <div class="links">
         <a href="home.php">Home</a>
         <a href="listpacks.php">Packs</a>

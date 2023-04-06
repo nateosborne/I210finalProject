@@ -19,30 +19,32 @@ if (!$query) {
 }
 //display results in a table
 ?>
-    <h2>Packs</h2>
+    <div class="packlistback">
+        <div class="packslistcont">
+            <table class="packsList">
+                <tr class="packsListhead">
+                    <th>Pack ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Size</th>
+                </tr>
 
-    <table class="packsList">
-        <tr>
-            <th>Pack ID</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Size</th>
-        </tr>
-
-        <?php
-        //create a while loop here to insert one row for each pack.
-        //insert a row for each record from query result
-        while(($row = $query->fetch_assoc()) !== NULL){
-            echo "<tr>";
-            echo "<td>" . $row['pack_id'] . "</td>";
-            echo "<td><a href=packsdetails.php?id=", $row['pack_id'], ">", $row['name'],
-            "</a></td>";;
-            echo "<td>" . $row['description'] . "</td>";
-            echo "<td>" . $row['size'] . "</td>";
-            echo"</tr>";
-        }
-        ?>
-    </table>
+                <?php
+                //create a while loop here to insert one row for each pack.
+                //insert a row for each record from query result
+                while (($row = $query->fetch_assoc()) !== NULL) {
+                    echo "<tr>";
+                    echo "<td>" . $row['pack_id'] . "</td>";
+                    echo "<td class='packslistname'><a href=packsdetails.php?id=", $row['pack_id'], ">", $row['name'],
+                    "</a></td>";
+                    echo "<td>" . $row['description'] . "</td>";
+                    echo "<td>" . $row['size'] . "</td>";
+                    echo "</tr>";
+                }
+                ?>
+            </table>
+        </div>
+    </div>
 
 <?php
 // clean up resultsets when we're done with them!

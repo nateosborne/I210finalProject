@@ -36,8 +36,10 @@ if(!$query->num_rows) {
 
 //display results in a table
 ?>
+    <div class="packlistback">
+    <div class="packslistcont">
     <table class="packsList">
-        <tr>
+        <tr class="packsListhead">
             <th>Pack Name</th>
             <th>Description</th>
             <th>Contents</th>
@@ -48,7 +50,7 @@ if(!$query->num_rows) {
         //create a while loop here to insert one row for each message.
         while(($row = $query->fetch_assoc()) !== NULL){
             echo "<tr>";
-            echo "<td>", $row['name'], "</td>";
+            echo "<td class='packslistname'>", $row['name'], "</td>";
             echo "<td>", $row['description'], "</td>";
             echo "<td>", $row['contents'], "</td>";
             echo "<td>", $row['size'], "</td>";
@@ -56,6 +58,8 @@ if(!$query->num_rows) {
         }
         ?>
     </table>
+    </div>
+    </div>
 
     <p><a href="listpacks.php">Back to Packs</a></p>
 
