@@ -19,31 +19,45 @@ if (!$query) {
 }
 //display results in a table
 ?>
-    <div class="packlistback">
-        <div class="packslistcont">
-            <table class="packsList">
-                <tr class="packsListhead">
-                    <th>Pack ID</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Size</th>
-                </tr>
+    <!--        <div class="packslistcont">-->
+    <!--            <table class="packsList">-->
+    <!--                <tr class="packsListhead">-->
+    <!--                    <th>Name</th>-->
+    <!--                    <th>Description</th>-->
+    <!--                    <th>Size</th>-->
+    <!--                </tr>-->
+    <!---->
+    <!--                --><?php
+//            //create a while loop here to insert one row for each pack.
+//            //insert a row for each record from query result
+//            while (($row = $query->fetch_assoc()) !== NULL) {
+//                echo "<tr>";
+//                echo "<td class='packslistname'><a href=packsdetails.php?id=", $row['pack_id'], ">", $row['name'],
+//                "</a></td>";
+//                echo "<td>" . $row['description'] . "</td>";
+//                echo "<td>" . $row['size'] . "</td>";
+//                echo "</tr>";
+//            }
+//            ?>
+    <!--            </table>-->
+    <!--        </div>-->
 
-                <?php
-                //create a while loop here to insert one row for each pack.
-                //insert a row for each record from query result
-                while (($row = $query->fetch_assoc()) !== NULL) {
-                    echo "<tr>";
-                    echo "<td>" . $row['pack_id'] . "</td>";
-                    echo "<td class='packslistname'><a href=packsdetails.php?id=", $row['pack_id'], ">", $row['name'],
-                    "</a></td>";
-                    echo "<td>" . $row['description'] . "</td>";
-                    echo "<td>" . $row['size'] . "</td>";
-                    echo "</tr>";
-                }
-                ?>
-            </table>
-        </div>
+    <div class="listpacks">
+        <?php
+        //create a while loop here to insert one row for each pack.
+        //insert a row for each record from query result
+        while (($row = $query->fetch_assoc()) !== NULL) {
+            echo "<div class='listpacks2'>";
+            echo "<div class='listpacksimg'></div>";
+            echo "<h1 class='listpacksname'><a href=packsdetails.php?id=", $row['pack_id'], ">", $row['name'],
+            "</a></h1>";
+            echo "<div class='listpacksbtn'>";
+            echo "<div class='packsbtn'><a style='color: white; text-decoration: none' href=packsdetails.php?id=", $row['pack_id'],
+            "</a>MORE</div>";
+            echo "</div>";
+            echo "</div>";
+        }
+        ?>
     </div>
 
 <?php
@@ -52,3 +66,7 @@ $query->close();
 
 // close the connection.
 $conn->close();
+
+require_once 'includes/footer.php';
+
+?>

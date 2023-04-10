@@ -17,6 +17,64 @@ h1, h2, h3, h4, h5, h6, p {
     src: url("../css/fonts/Outfit-SemiBold.ttf");
 }
 
+@font-face {
+    font-family: OutfitR;
+    src: url("../css/fonts/Outfit-Regular.ttf");
+}
+
+.listpacks{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.listpacks2{
+    font-family: Outfit;
+    width: 400px;
+    box-shadow: 0px 0px 10px 0px gray;
+    margin-bottom: 100px;
+}
+
+.listpacksimg{
+    height: 400px;
+    background-image: url("../images/astro-box_1200x1200.webp");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #EBE8E8;
+}
+
+.listpacksname a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.listpacksbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.packsbtn{
+    height: 75px;
+    width: 200px;
+    background-color: blue;
+    margin-bottom: -25px;
+    background-image: linear-gradient(45deg, rgb(32,101,255), rgb(58,254,254));
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+
 .packslistcont {
     display: flex;
     justify-content: center;
@@ -137,9 +195,38 @@ i {
     background-size: 100%;
 }
 
+.heroimg2 {
+    height: 500px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-image: url("../images/astro-box_1200x1200.webp");
+    background-size: 100%;
+}
+
 .herotxt {
     height: 300px;
     width: 600px;
+}
+
+.herotxt2 {
+    font-family: Outfit;
+    font-size: 50px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addtocart{
+    height: 75px;
+    width: 300px;
+    background-color: blue;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(45deg, rgb(32,101,255), rgb(58,254,254));
+    border-radius: 10px;
 }
 
 .herotxt h1 {
@@ -203,7 +290,7 @@ span {
     -webkit-text-fill-color: transparent;
 }
 
-.soundstxt p{
+.soundstxt p {
     font-family: Outfit;
     font-size: 20px;
     text-decoration: underline;
@@ -216,4 +303,64 @@ span {
     background-size: 100%;
     background-repeat: no-repeat;
     margin-top: -50px;
+}
+
+.packdetails{
+    height: 800px;
+    background-color: #242424;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.packdetailscont{
+    width: 82%;
+    height: 550px;
+}
+
+.packdetailscont p{
+    font-family: OutfitR;
+    font-size: 24px;
+    color: #BFBFBF;
+    line-height: 50px;
+}
+
+.packdetailscont h2{
+    font-family: Outfit;
+    color: #BFBFBF;
+}
+
+.packdetailscont h1{
+    font-family: Outfit;
+    font-size: 70px;
+    color: white;
+}
+
+.back{
+    margin-top: 50px;
+    height: 50px;
+    width: 150px;
+    background-image: linear-gradient(45deg, rgb(32,101,255), rgb(58,254,254));
+    font-family: Outfit;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.back a{
+    text-decoration: none;
+    color: white;
+}
+
+footer{
+    height: 100px;
+    width: 100%;
+    background-color: #383838;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: OutfitR;
 }

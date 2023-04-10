@@ -30,12 +30,16 @@ require_once 'includes/header.php';
 <div class="soundscont">
     <div class="sounds">
         <div class="soundstxt">
-            <h1>SOUNDS</h1>
+            <a href="listpacks.php"><h1>SOUNDS</h1></a>
             <a href="listpacks.php"><p>DISCOVER NEW SOUNDS ></p></a>
-            <div class="vinyls"></div>
+            <a href="listpacks.php"><div class="vinyls"></div></a>
         </div>
     </div>
 </div>
 
 </body>
 </html>
+
+<?php
+require_once 'includes/footer.php';
+?>
