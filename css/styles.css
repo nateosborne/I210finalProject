@@ -22,12 +22,17 @@ h1, h2, h3, h4, h5, h6, p {
     src: url("../css/fonts/Outfit-Regular.ttf");
 }
 
+@font-face {
+    font-family: OutfitL;
+    src: url("../css/fonts/Outfit-Light.ttf");
+}
+
 .listpacks{
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: space-evenly;
     width: 100%;
-    margin-top: 100px;
+    margin-top: 45px;
 }
 
 .listpacks2{
@@ -51,6 +56,7 @@ h1, h2, h3, h4, h5, h6, p {
     justify-content: center;
     text-decoration: none;
     padding: 20px;
+    color: black;
 }
 
 .listpacksbtn{
@@ -157,10 +163,15 @@ table.packsList th {
 }
 
 .icons {
-    height: 30px;
+    height: 40px;
     width: 180px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+a:hover i{
+    font-size: 33px;
 }
 
 i {
@@ -364,3 +375,108 @@ footer{
     color: white;
     font-family: OutfitR;
 }
+
+.account{
+    height: 700px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account-cont{
+    height: 480px;
+    width: 650px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.account-cont h1{
+    font-family: Outfit;
+    font-size: 70px;
+}
+
+.login{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.account-cont2{
+    height: 600px;
+    width: 650px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.account-cont2 h1{
+    font-family: Outfit;
+    font-size: 70px;
+}
+
+
+.login2{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputs2{
+    margin-top: 20px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.submit {
+    height: 70px;
+    width: 30%;
+    border-radius: 15px;
+    border: #BFBFBF solid 2px;
+    font-family: OutfitL;
+    font-size: 25px;
+}
+
+.inputs{
+    margin-top: 20px;
+    width: 100%;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.submit1{
+    height: 70px;
+    width: 100%;
+    border-radius: 15px;
+    border: #BFBFBF solid 2px;
+    font-family: OutfitL;
+    font-size: 25px;
+    padding-left: 20px;
+}
+
+.createact{
+    font-size: 20px;
+    font-family: OutfitL;
+    text-underline-offset: 5px;
+}
+
+.createact a{
+    color: black;
+}
+
+/*input{*/
+/*    width: 650px;*/
+/*    height: 50px;*/
+/*}*/

@@ -16,7 +16,7 @@
     </div>
     <div class="icons">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <i class="fa-solid fa-circle-user"></i>
+        <a target="_self" href="account.php"><i class="fa-solid fa-circle-user"></i></a>
         <i class="fa-solid fa-bag-shopping"></i>
     </div>
 </div>

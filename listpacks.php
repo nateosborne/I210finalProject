@@ -47,6 +47,7 @@ if (!$query) {
         //create a while loop here to insert one row for each pack.
         //insert a row for each record from query result
         while (($row = $query->fetch_assoc()) !== NULL) {
+            echo "<div class='listpacks'>";
             echo "<div class='listpacks2'>";
             echo "<div class='listpacksimg'></div>";
             echo "<h1 class='listpacksname'><a href=packsdetails.php?id=", $row['pack_id'], ">", $row['name'],
@@ -54,6 +55,7 @@ if (!$query) {
             echo "<div class='listpacksbtn'>";
             echo "<div class='packsbtn'><a style='color: white; text-decoration: none' href=packsdetails.php?id=", $row['pack_id'],
             "</a>MORE</div>";
+            echo "</div>";
             echo "</div>";
             echo "</div>";
         }
