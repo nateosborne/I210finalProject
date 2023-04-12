@@ -528,5 +528,33 @@ table.newuser td input{
     padding-left: 20px;
 }
 
-table.newuser tr {
+.newusermsg{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-family: Outfit;
+    color: #000;
+    flex-direction: column;
+}
+
+.newusermsgbtn{
+    text-decoration: none;
+}
+
+.newusermsgbtn h4{
+    background-image: linear-gradient(45deg, rgb(32,101,255), rgb(58,254,254));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 50px;
+}
+
+.newusermsgbtn a{
+    /*background-image: linear-gradient(45deg, rgb(32,101,255), rgb(58,254,254));*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    color: #2DB4FE;
+    text-decoration: none;
 }

@@ -29,7 +29,8 @@ if(!$query) {
     exit;
 }
 
-echo "The new user account has been created.";
+echo "<div class='newusermsg'><h1>You have signed up!</h1><div class='newusermsgbtn'><a href='home.php'>
+<h4>Continue browsing</h4></a></div></div>";
 $conn->close();
 
 include 'includes/footer.php';
