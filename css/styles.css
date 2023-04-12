@@ -81,16 +81,16 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 
-.packslistcont {
+.userslistcont {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 100px;
 }
 
-table.packsList {
+table.usersList {
     height: 500px;
-    width: 1300px;
+    width: 1000px;
     border: 10px solid #242424;
     border-collapse: collapse;
     color: black;
@@ -100,31 +100,62 @@ table.packsList {
     font-size: 20px;
 }
 
-.packlistback{
-    /*background-image: radial-gradient(#262626, #0C0C0C);*/
-    background-color: white;
-}
-
-.packsListhead{
-    background-color: #242424;
-    color: #fff;
-}
-
-.packslistname a:link, a:visited{
-    color: #000;
-    text-decoration: none;
-    font-size: 40px;
-}
-
-.packslistname a:hover{
-    text-decoration: underline;
-}
-
-table.packsList td,
-table.packsList th {
+table.usersList td,
+table.usersList th {
     border: 1px solid #333;
     padding: 50px;
-    line-height: 35px;
+    line-height: 0px;
+}
+
+table.usersList a{
+    color: #000;
+}
+
+table.usersDetails {
+    height: 300px;
+    width: 700px;
+    border: 10px solid #242424;
+    border-collapse: collapse;
+    color: black;
+    font-family: Outfit;
+    text-decoration: none;
+    background-color: #fff;
+    font-size: 20px;
+}
+
+table.usersDetails td,
+table.usersDetails th {
+    border: 1px solid #333;
+    padding: 50px;
+    line-height: 5px;
+}
+
+.userdetailsbtns{
+    display: flex;
+    justify-content: center;
+    margin-top: -50px;
+    height: 100px;
+    width: 100%;
+}
+
+.userbtns{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.userdetailsbtn{
+    height: 50px;
+    width: 150px;
+    border-radius: 15px;
+    border: #BFBFBF solid 2px;
+    font-family: OutfitL;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
 }
 
 .nav {
@@ -480,3 +511,22 @@ footer{
 /*    width: 650px;*/
 /*    height: 50px;*/
 /*}*/
+
+
+table.newuser{
+    height: 420px;
+    width: 100%;
+}
+
+table.newuser td input{
+    height: 70px;
+    width: 100%;
+    border-radius: 15px;
+    border: #BFBFBF solid 2px;
+    font-family: OutfitL;
+    font-size: 25px;
+    padding-left: 20px;
+}
+
+table.newuser tr {
+}

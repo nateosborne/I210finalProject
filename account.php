@@ -14,6 +14,7 @@ require_once 'includes/header.php';
             </div>
         </div>
         <div class="createact"><a href="createuser.php">Create account</a></div>
+        <div class="createact"><a href="listusers.php">View accounts</a></div>
     </div>
 </div>
 
