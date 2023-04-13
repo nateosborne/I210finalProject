@@ -34,9 +34,9 @@ if (!$query) {
     include ('includes/footer.php');
     exit;
 }
-echo "Your account has been updated.";
 
-// close the connection.
+echo "<div class='newusermsg'><h1>Account has been updated.</h1><div class='newusermsgbtn'><a href='listusers.php'>
+<h4>Back to accounts</h4></a></div></div>";
 $conn->close();
 
 include ('includes/footer.php');

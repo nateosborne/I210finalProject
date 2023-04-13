@@ -30,7 +30,7 @@ require_once 'includes/header.php';
 <div class="soundscont">
     <div class="sounds">
         <div class="soundstxt">
-            <a href="listpacks.php"><h1>SOUNDS</h1></a>
+            <div class="newusermsgbtn"><a href="listpacks.php"><h1>SOUNDS</h1></a></div>
             <a href="listpacks.php"><p>DISCOVER NEW SOUNDS ></p></a>
             <a href="listpacks.php"><div class="vinyls"></div></a>
         </div>

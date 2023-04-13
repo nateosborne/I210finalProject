@@ -322,6 +322,7 @@ span {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-decoration: none;
 }
 
 .soundstxt h1{
@@ -336,6 +337,7 @@ span {
     font-family: Outfit;
     font-size: 20px;
     text-decoration: underline;
+    color: black;
 }
 
 .vinyls{
@@ -452,9 +454,9 @@ footer{
 }
 
 
-.login2{
+.login2 {
     width: 100%;
-    height: 500px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -476,6 +478,29 @@ footer{
     border: #BFBFBF solid 2px;
     font-family: OutfitL;
     font-size: 25px;
+    margin-right: 50px;
+}
+
+.submit2 {
+    height: 70px;
+    width: 30%;
+    border-radius: 15px;
+    border: #BFBFBF solid 2px;
+    font-family: OutfitL;
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+
+.submitblue {
+    height: 70px;
+    width: 30%;
+    border-radius: 15px;
+    border: gray solid 2px;
+    font-family: OutfitL;
+    font-size: 25px;
+    background-image: linear-gradient(45deg, rgb(32,101,255), rgb(58,254,254));
+    color: #fff;
 }
 
 .inputs{
@@ -557,4 +582,9 @@ table.newuser td input{
     /*-webkit-text-fill-color: transparent;*/
     color: #2DB4FE;
     text-decoration: none;
+}
+
+.userbuttons{
+    display: flex;
+    justify-content: center;
 }

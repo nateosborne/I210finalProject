@@ -14,7 +14,7 @@ require_once('includes/database.php');
 //retrieve user id from a query string
 if (!filter_has_var(INPUT_GET, 'id')) {
     echo "Error: user id was not found.";
-    require_once ('includes/footer.php');
+    require_once('includes/footer.php');
     exit();
 }
 $user_id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
@@ -41,35 +41,40 @@ $row = $query->fetch_assoc();
 //display results in a table
 ?>
 
-    <h2>Edit User Details</h2>
+    <div class="account">
+        <div class="account-cont2">
+            <div class="login2">
+                <h1>Edit Account</h1>
 
-    <form name="edituser" action="updateuser.php" method="get">
-        <table class="userdetails">
-            <tr>
-                <th>User ID</th>
-                <td><input name="user_id" value="<?php echo $row['user_id'] ?>" readonly="readonly" /></td>
-            </tr>
-            <tr>
-                <th>First name</th>
-                <td><input name="fname" value="<?php echo $row['fname'] ?>" size="30" required /></td>
-            </tr>
-            <tr>
-                <th>Last name</th>
-                <td><input name="lname" value="<?php echo $row['lname'] ?>" size="30" required /></td>
-            </tr>
-            <tr>
-                <th>Email</th>
-                <td><input type="email" name="email" value="<?php echo $row['email'] ?>" size="40" required /></td>
-            </tr>
-        </table>
-        <br>
-        <input type="submit" value="Update">&nbsp;&nbsp;
-        <input type="button" onclick="window.location.href='userdetails.php?id=<?php echo
-        $row['user_id'] ?>'" value="Cancel">
+                <form name="edituser" action="updateuser.php" method="get">
+                    <table class="newuser">
+                        <tr>
+                            <td><input name="user_id" value="<?php echo $row['user_id'] ?>" readonly="readonly"/></td>
+                        </tr>
+                        <tr>
+                            <td><input name="fname" value="<?php echo $row['fname'] ?>" size="30" required/></td>
+                        </tr>
+                        <tr>
+                            <td><input name="lname" value="<?php echo $row['lname'] ?>" size="30" required/></td>
+                        </tr>
+                        <tr>
+                            <td><input type="email" name="email" value="<?php echo $row['email'] ?>" size="40"
+                                       required/></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <div class="userbuttons">
+                        <input class="submit" type="button" onclick="window.location.href='userdetails.php?id=<?php echo
+                        $row['user_id'] ?>'" value="Cancel">
+                        <input class="submitblue" type="submit" value="Update">&nbsp;&nbsp;
+                    </div>
 
-    </form>
 
-    <p><a href="listusers.php">Back to Users</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
 
 <?php
 // clean up resultsets when we're done with them!

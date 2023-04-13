@@ -28,8 +28,8 @@ if (!$query) {
     exit;
 }
 //confirm delete
-echo "Your account has been deleted.";
-// close the connection.
+echo "<div class='newusermsg'><h1>Account has been deleted</h1><div class='newusermsgbtn'><a href='listusers.php'>
+<h4>Back to accounts</h4></a></div></div>";
 $conn->close();
 
 include ('includes/footer.php');

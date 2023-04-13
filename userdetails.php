@@ -71,7 +71,6 @@ $row = $query->fetch_assoc();
         </div>
     </div>
 
-    <p><a href="listusers.php">Back to Users</a></p>
 
 <?php
 // clean up resultsets when we're done with them!
