@@ -12,7 +12,7 @@ if (!filter_has_var(INPUT_GET, 'id')) {
 $pack_id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
 //select statement
-$sql = "SELECT packs.name, packs.description, packs.size, subfolders.contents FROM packs,
+$sql = "SELECT packs.pack_id, packs.name, packs.description, packs.size, subfolders.contents FROM packs,
         subfolders WHERE packs.pack_id=subfolders.author_id AND packs.pack_id=" . $pack_id;
 
 //execute the query
@@ -70,7 +70,8 @@ if(!$query->num_rows) {
             echo "<div class='herocontainer'>";
             echo "<div class='heroimg2'></div>";
             echo "<div class='herotxt2'><h1>", $row['name'],"</h1>";
-            echo "<div class='addtocart'>ADD TO CART</div>";
+            echo "<a href='addtocart.php?id=$pack_id'",
+            "<div class='addtocart'>ADD TO CART</div></a>";
             echo "</div>";
             echo "</div>";
             echo "</div>";

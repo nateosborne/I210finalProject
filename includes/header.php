@@ -15,8 +15,8 @@
         <a href="">Contact</a>
     </div>
     <div class="icons">
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <a target="_self" href="searchpacks.php"><i class="fa-solid fa-magnifying-glass"></i>
         <a target="_self" href="account.php"><i class="fa-solid fa-circle-user"></i></a>
-        <i class="fa-solid fa-bag-shopping"></i>
+        <a target="_self" href="showcart.php"><i class="fa-solid fa-bag-shopping"></i></a>
     </div>
 </div>

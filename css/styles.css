@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6, p {
     src: url("../css/fonts/Outfit-Light.ttf");
 }
 
-.listpacks{
+.listpacks {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -35,14 +35,14 @@ h1, h2, h3, h4, h5, h6, p {
     margin-top: 45px;
 }
 
-.listpacks2{
+.listpacks2 {
     font-family: Outfit;
     width: 400px;
     box-shadow: 0px 0px 10px 0px gray;
     margin-bottom: 100px;
 }
 
-.listpacksimg{
+.listpacksimg {
     height: 400px;
     background-image: url("../images/astro-box_1200x1200.webp");
     background-size: 50%;
@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6, p {
     background-color: #EBE8E8;
 }
 
-.listpacksname a{
+.listpacksname a {
     display: flex;
     justify-content: center;
     text-decoration: none;
@@ -59,18 +59,18 @@ h1, h2, h3, h4, h5, h6, p {
     color: black;
 }
 
-.listpacksbtn{
+.listpacksbtn {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.packsbtn{
+.packsbtn {
     height: 75px;
     width: 200px;
     background-color: blue;
     margin-bottom: -25px;
-    background-image: linear-gradient(45deg, rgb(32,101,255), rgb(58,254,254));
+    background-image: linear-gradient(45deg, rgb(32, 101, 255), rgb(58, 254, 254));
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -107,7 +107,7 @@ table.usersList th {
     line-height: 0px;
 }
 
-table.usersList a{
+table.usersList a {
     color: #000;
 }
 
@@ -130,7 +130,7 @@ table.usersDetails th {
     line-height: 5px;
 }
 
-.userdetailsbtns{
+.userdetailsbtns {
     display: flex;
     justify-content: center;
     margin-top: -50px;
@@ -138,13 +138,13 @@ table.usersDetails th {
     width: 100%;
 }
 
-.userbtns{
+.userbtns {
     display: flex;
     justify-content: space-between;
     width: 500px;
 }
 
-.userdetailsbtn{
+.userdetailsbtn {
     height: 50px;
     width: 150px;
     border-radius: 15px;
@@ -201,7 +201,7 @@ table.usersDetails th {
     align-items: center;
 }
 
-a:hover i{
+a:hover i {
     font-size: 33px;
 }
 
@@ -259,7 +259,7 @@ i {
     align-items: center;
 }
 
-.addtocart{
+.addtocart {
     height: 75px;
     width: 300px;
     background-color: blue;
@@ -267,7 +267,7 @@ i {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(45deg, rgb(32,101,255), rgb(58,254,254));
+    background-image: linear-gradient(45deg, rgb(32, 101, 255), rgb(58, 254, 254));
     border-radius: 10px;
 }
 
@@ -302,7 +302,7 @@ span {
     text-decoration: none;
 }
 
-.soundscont{
+.soundscont {
     background-color: #F7F7F7;
     height: 600px;
     display: flex;
@@ -310,14 +310,14 @@ span {
     align-items: center;
 }
 
-.sounds{
+.sounds {
     height: 500px;
     width: 800px;
     background-color: #fff;
     padding: 50px;
 }
 
-.soundstxt{
+.soundstxt {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -325,10 +325,10 @@ span {
     text-decoration: none;
 }
 
-.soundstxt h1{
+.soundstxt h1 {
     font-family: Outfit;
     font-size: 50px;
-    background-image: linear-gradient(45deg, rgb(32,101,255), rgb(58,254,254));
+    background-image: linear-gradient(45deg, rgb(32, 101, 255), rgb(58, 254, 254));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -340,7 +340,7 @@ span {
     color: black;
 }
 
-.vinyls{
+.vinyls {
     background-image: url("../images/vinyls.webp");
     height: 350px;
     width: 400px;
@@ -349,7 +349,7 @@ span {
     margin-top: -50px;
 }
 
-.packdetails{
+.packdetails {
     height: 800px;
     background-color: #242424;
     display: flex;
@@ -357,34 +357,34 @@ span {
     align-items: center;
 }
 
-.packdetailscont{
+.packdetailscont {
     width: 82%;
     height: 550px;
 }
 
-.packdetailscont p{
+.packdetailscont p {
     font-family: OutfitR;
     font-size: 24px;
     color: #BFBFBF;
     line-height: 50px;
 }
 
-.packdetailscont h2{
+.packdetailscont h2 {
     font-family: Outfit;
     color: #BFBFBF;
 }
 
-.packdetailscont h1{
+.packdetailscont h1 {
     font-family: Outfit;
     font-size: 70px;
     color: white;
 }
 
-.back{
+.back {
     margin-top: 50px;
     height: 50px;
     width: 150px;
-    background-image: linear-gradient(45deg, rgb(32,101,255), rgb(58,254,254));
+    background-image: linear-gradient(45deg, rgb(32, 101, 255), rgb(58, 254, 254));
     font-family: Outfit;
     color: white;
     display: flex;
@@ -393,12 +393,12 @@ span {
     border-radius: 10px;
 }
 
-.back a{
+.back a {
     text-decoration: none;
     color: white;
 }
 
-footer{
+footer {
     height: 100px;
     width: 100%;
     background-color: #383838;
@@ -409,7 +409,7 @@ footer{
     font-family: OutfitR;
 }
 
-.account{
+.account {
     height: 700px;
     width: 100%;
     display: flex;
@@ -417,7 +417,7 @@ footer{
     justify-content: center;
 }
 
-.account-cont{
+.account-cont {
     height: 480px;
     width: 650px;
     display: flex;
@@ -426,12 +426,12 @@ footer{
     flex-direction: column;
 }
 
-.account-cont h1{
+.account-cont h1 {
     font-family: Outfit;
     font-size: 70px;
 }
 
-.login{
+.login {
     width: 100%;
     height: 350px;
     display: flex;
@@ -439,7 +439,7 @@ footer{
     align-items: center;
 }
 
-.account-cont2{
+.account-cont2 {
     height: 600px;
     width: 650px;
     display: flex;
@@ -448,7 +448,7 @@ footer{
     flex-direction: column;
 }
 
-.account-cont2 h1{
+.account-cont2 h1 {
     font-family: Outfit;
     font-size: 70px;
 }
@@ -462,7 +462,7 @@ footer{
     align-items: center;
 }
 
-.inputs2{
+.inputs2 {
     margin-top: 20px;
     width: 100%;
     height: 400px;
@@ -499,11 +499,11 @@ footer{
     border: gray solid 2px;
     font-family: OutfitL;
     font-size: 25px;
-    background-image: linear-gradient(45deg, rgb(32,101,255), rgb(58,254,254));
+    background-image: linear-gradient(45deg, rgb(32, 101, 255), rgb(58, 254, 254));
     color: #fff;
 }
 
-.inputs{
+.inputs {
     margin-top: 20px;
     width: 100%;
     height: 170px;
@@ -512,7 +512,7 @@ footer{
     justify-content: space-between;
 }
 
-.submit1{
+.submit1 {
     height: 70px;
     width: 100%;
     border-radius: 15px;
@@ -522,13 +522,13 @@ footer{
     padding-left: 20px;
 }
 
-.createact{
+.createact {
     font-size: 20px;
     font-family: OutfitL;
     text-underline-offset: 5px;
 }
 
-.createact a{
+.createact a {
     color: black;
 }
 
@@ -538,12 +538,12 @@ footer{
 /*}*/
 
 
-table.newuser{
+table.newuser {
     height: 420px;
     width: 100%;
 }
 
-table.newuser td input{
+table.newuser td input {
     height: 70px;
     width: 100%;
     border-radius: 15px;
@@ -553,7 +553,7 @@ table.newuser td input{
     padding-left: 20px;
 }
 
-.newusermsg{
+.newusermsg {
     height: 100%;
     width: 100%;
     display: flex;
@@ -565,18 +565,18 @@ table.newuser td input{
     flex-direction: column;
 }
 
-.newusermsgbtn{
+.newusermsgbtn {
     text-decoration: none;
 }
 
-.newusermsgbtn h4{
-    background-image: linear-gradient(45deg, rgb(32,101,255), rgb(58,254,254));
+.newusermsgbtn h4 {
+    background-image: linear-gradient(45deg, rgb(32, 101, 255), rgb(58, 254, 254));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-top: 50px;
 }
 
-.newusermsgbtn a{
+.newusermsgbtn a {
     /*background-image: linear-gradient(45deg, rgb(32,101,255), rgb(58,254,254));*/
     /*-webkit-background-clip: text;*/
     /*-webkit-text-fill-color: transparent;*/
@@ -584,7 +584,56 @@ table.newuser td input{
     text-decoration: none;
 }
 
-.userbuttons{
+.userbuttons {
     display: flex;
     justify-content: center;
+}
+
+.packsresultsh1 {
+    font-family: Outfit;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.searchpacks {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchpacksform {
+    height: 300px;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.searchpackstxt {
+    font-family: Outfit;
+    font-size: 30px;
+}
+
+.searchpacksinput {
+    height: 70px;
+    width: 60%;
+    border-radius: 15px;
+    border: #BFBFBF solid 2px;
+    font-family: OutfitL;
+    font-size: 25px;
+    margin-right: 50px;
+    margin-top: 25px;
+    padding-left: 25px;
+}
+
+.searchpackssubmit{
+    height: 70px;
+    width: 20%;
+    border-radius: 15px;
+    border: #BFBFBF solid 2px;
+    font-family: OutfitL;
+    font-size: 25px;
+    margin-right: 50px;
+    margin-top: 25px;
 }

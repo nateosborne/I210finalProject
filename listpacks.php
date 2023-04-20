@@ -50,6 +50,7 @@ if (!$query) {
             echo "<div class='listpacks'>";
             echo "<div class='listpacks2'>";
             echo "<div class='listpacksimg'></div>";
+//            echo "<img src=",$row['image'],"/>";
             echo "<h1 class='listpacksname'><a href=packsdetails.php?id=", $row['pack_id'], ">", $row['name'],
             "</a></h1>";
             echo "<div class='listpacksbtn'>";
