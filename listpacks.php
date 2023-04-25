@@ -3,6 +3,17 @@
 require_once 'includes/header.php';
 require_once 'includes/database.php';
 
+//variables for a user’s login, name, and role
+$login = '';
+$role = 0;
+
+//if the use has logged in, retrieve login, name, and role.
+if (isset($_SESSION['login']) AND
+    isset($_SESSION['role'])) {
+    $login = $_SESSION['login'];
+    $role = $_SESSION['role'];
+}
+
 //SQL statement for select
 $sql = "SELECT * FROM packs";
 
@@ -60,11 +71,7 @@ if (!$query) {
             echo "</div>";
         }
 
-        $login_status = '';
-        if (isset($_SESSION['login_status']))
-            $login_status = $_SESSION['login_status'];
-
-        if ($login_status == 1) {
+        if ($role == 1) {
             echo "<div><a href='createpack.php'>Add Pack</a></div>";
         }
         ?>

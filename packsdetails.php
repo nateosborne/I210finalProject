@@ -3,6 +3,16 @@
 require_once('includes/header.php');
 require_once('includes/database.php');
 
+//variables for a user’s login, name, and role
+$login = '';
+$role = 0;
+
+//if the use has logged in, retrieve login, name, and role.
+if (isset($_SESSION['login']) AND
+    isset($_SESSION['role'])) {
+    $login = $_SESSION['login'];
+    $role = $_SESSION['role'];
+}
 
 //retrieve pack id from a query string
 if (!filter_has_var(INPUT_GET, 'id')) {
@@ -12,7 +22,8 @@ if (!filter_has_var(INPUT_GET, 'id')) {
 $pack_id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
 //select statement
-$sql = "SELECT packs.pack_id, packs.name, packs.description, packs.size, packs.image, subfolders.contents FROM packs,
+$sql = "SELECT packs.pack_id, packs.name, packs.description, packs.size, packs.price, packs.image,
+       subfolders.contents FROM packs,
         subfolders WHERE packs.pack_id=subfolders.subfolder_id AND packs.pack_id=" . $pack_id;
 
 //execute the query
@@ -57,6 +68,12 @@ if(!$query->num_rows) {
                 $row['contents'],"</p><h2>Size: ",
             $row['size'],"</h2><p>";
             echo "<div class='back'><a href='listpacks.php'>< Back to packs</a></div>";
+            if ($role == 1){
+                echo "<p><a href=editpack.php?id=", $row['pack_id'], ">",
+                "Edit Pack</a></h1>";
+                echo "<p><a href=deletepack.php?id=", $row['pack_id'], ">",
+                "Delete Pack</a></h1>";
+            }
             echo "</div>";
             echo "</div>";
 

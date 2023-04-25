@@ -1,0 +1,40 @@
+<?php
+
+$page_title = "Delete a pack";
+
+require_once ('includes/header.php');
+require_once('includes/database.php');
+
+//retrieve pack id from a querystring
+if (!filter_has_var(INPUT_GET, 'id')) {
+    echo "Error: pack id was not found.";
+    require_once ('includes/footer.php');
+    exit();
+}
+
+$pack_id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+
+//Define MySQL delete statement
+$sql = "DELETE FROM packs WHERE pack_id=$pack_id";
+//Execute the query.
+$query = @$conn->query($sql);
+
+//Define MySQL delete statement
+$sql = "DELETE FROM subfolders WHERE subfolder_id=$pack_id";
+//Execute the query.
+$query = @$conn->query($sql);
+
+//Handle selection errors
+if (!$query) {
+    $errno = $conn->errno;
+    $errmsg = $conn->error;
+    echo "Selection failed with: ($errno) $errmsg<br/>\n";
+    $conn->close();
+    exit;
+}
+//confirm delete
+echo "<div class='newusermsg'><h1>Pack has been deleted</h1><div class='newusermsgbtn'><a href='listpacks.php'>
+<h4>Back to packs</h4></a></div></div>";
+$conn->close();
+
+include ('includes/footer.php');

@@ -11,10 +11,11 @@ $lname = $conn->real_escape_string(trim(filter_input(INPUT_GET, 'lname', FILTER_
 $email = $conn->real_escape_string(trim(filter_input(INPUT_GET, 'email', FILTER_SANITIZE_EMAIL)));
 $password = $conn->real_escape_string(trim(filter_input(INPUT_GET, 'password', FILTER_DEFAULT)));
 
+$role = 2;
 
 //define the MySQL insert statement
 $sql = "INSERT INTO users VALUES (NULL, '$fname', '$lname', '$email',
-'$password')";
+'$password', '$role')";
 
 //execute the query
 $query = @$conn->query($sql);
