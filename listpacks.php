@@ -49,8 +49,7 @@ if (!$query) {
         while (($row = $query->fetch_assoc()) !== NULL) {
             echo "<div class='listpacks'>";
             echo "<div class='listpacks2'>";
-            echo "<div class='listpacksimg'></div>";
-//            echo "<img src=",$row['image'],"/>";
+            echo "<div class='listpacksimg'><img class='listpacksimg' src='images/" . $row['image'] ."?>' ></div>";
             echo "<h1 class='listpacksname'><a href=packsdetails.php?id=", $row['pack_id'], ">", $row['name'],
             "</a></h1>";
             echo "<div class='listpacksbtn'>";
@@ -59,6 +58,14 @@ if (!$query) {
             echo "</div>";
             echo "</div>";
             echo "</div>";
+        }
+
+        $login_status = '';
+        if (isset($_SESSION['login_status']))
+            $login_status = $_SESSION['login_status'];
+
+        if ($login_status == 1) {
+            echo "<div><a href='createpack.php'>Add Pack</a></div>";
         }
         ?>
     </div>

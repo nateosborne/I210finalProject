@@ -17,7 +17,7 @@ $terms = explode(" ", $terms_str);
 //select statement using pattern search. Multiple terms are concatnated in the loop.
 $sql = "SELECT * FROM packs WHERE 1";
 foreach ($terms as $term) {
-    $sql .= " AND name LIKE '%$term%'";
+    $sql .= " AND name OR description LIKE '%$term%'";
 }
 
 //execute the query
@@ -42,13 +42,14 @@ if ($query->num_rows == 0) {
     exit;
 }
 ?>
+    <div class="listpacks">
 
 <?php
 
 while (($row = $query->fetch_assoc()) !== NULL) {
     echo "<div class='listpacks'>";
     echo "<div class='listpacks2'>";
-    echo "<div class='listpacksimg'></div>";
+    echo "<div class='listpacksimg'><img class='listpacksimg' src='images/" . $row['image'] ."?>' ></div>";
     echo "<h1 class='listpacksname'><a href=packsdetails.php?id=", $row['pack_id'], ">", $row['name'],
     "</a></h1>";
     echo "<div class='listpacksbtn'>";
@@ -59,6 +60,7 @@ while (($row = $query->fetch_assoc()) !== NULL) {
     echo "</div>";
 }
 ?>
+    </div>
 
 <?php
 // clean up resultsets when we're done with them!

@@ -32,6 +32,6 @@ if (array_key_exists($pack_id, $cart)) {
 
 //update the session variable
 $_SESSION['cart'] = $cart;
-
+print_r($_SESSION);
 //redirect to the showcart.php page.
 header('Location: showcart.php');

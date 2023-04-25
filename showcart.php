@@ -13,6 +13,8 @@ require_once('includes/database.php');
 ?>
     <h2>My Shopping Cart</h2>
 <?php
+
+
 if (!isset($_SESSION['cart']) || !$_SESSION['cart']) {
     echo "Your shopping cart is empty.<br><br>";
     include ('includes/footer.php');
@@ -26,16 +28,15 @@ $cart = $_SESSION['cart'];
 ?>
     <table class="booklist">
         <tr>
-            <th style="width: 500px">Title</th>
+            <th style="width: 200px">Name</th>
             <th style="width: 60px">Price</th>
             <th style="width: 60px">Quantity</th>
-            <th style="width: 60px">Total</th>
         </tr>
         <?php
         //insert code to display the shopping cart content
 
         //select statement
-        $sql = "SELECT pack_id, title, price FROM packs WHERE 0";
+        $sql = "SELECT pack_id, name, price FROM packs WHERE 0";
 
         foreach (array_keys($cart) as $pack_id) {
             $sql .= " OR pack_id=$pack_id";
@@ -44,26 +45,31 @@ $cart = $_SESSION['cart'];
         //execute the query
         $query = $conn->query($sql);
 
+        $ovrtotal = 0;
+
         //fetch packs and display them in a table
         while ($row = $query->fetch_assoc()) {
             $pack_id = $row['pack_id'];
-            $title = $row['title'];
+            $name = $row['name'];
             $price = $row['price'];
             $qty = $cart[$pack_id];
             $total = $qty * $price;
+            $ovrtotal += $total;
             echo "<tr>",
-            "<td><a href='packsdetails.php?id=$pack_id'>$title</a></td>",
+            "<td><a href='packsdetails.php?id=$pack_id'>$name</a></td>",
             "<td>$$price</td>",
             "<td>$qty</td>",
-            "<td>$$total</td>",
             "</tr>";
         }
         ?>
     </table>
+<?php
+echo "<div>$$ovrtotal</div>";
+?>
     <br>
     <div class="bookstore-button">
         <input type="button" value="Checkout" onclick="window.location.href = 'checkout.php'"/>
-        <input type="button" value="Cancel" onclick="window.location.href = 'listbooks.php'" />
+        <input type="button" value="Cancel" onclick="window.location.href = 'listpacks.php'" />
     </div>
     <br><br>
 

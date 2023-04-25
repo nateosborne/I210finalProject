@@ -12,8 +12,8 @@ if (!filter_has_var(INPUT_GET, 'id')) {
 $pack_id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
 //select statement
-$sql = "SELECT packs.pack_id, packs.name, packs.description, packs.size, subfolders.contents FROM packs,
-        subfolders WHERE packs.pack_id=subfolders.author_id AND packs.pack_id=" . $pack_id;
+$sql = "SELECT packs.pack_id, packs.name, packs.description, packs.size, packs.image, subfolders.contents FROM packs,
+        subfolders WHERE packs.pack_id=subfolders.subfolder_id AND packs.pack_id=" . $pack_id;
 
 //execute the query
 $query = @$conn->query($sql);
@@ -28,49 +28,25 @@ if (!$query) {
 }
 //handle zero message
 if(!$query->num_rows) {
-    echo "There was no messages posted by the user.";
+    echo "There are no pack details";
     $conn->close();
-    echo "<p><a href='listpacks.php'>Back to Users</a></p>";
+    echo "<p><a href='listpacks.php'>Back to Packs</a></p>";
     exit;
 }
 
 //display results in a table
 ?>
-<!--    <div class="packlistback">-->
-<!--    <div class="packslistcont">-->
-<!--    <table class="packsList">-->
-<!--        <tr class="packsListhead">-->
-<!--            <th>Pack Name</th>-->
-<!--            <th>Description</th>-->
-<!--            <th>Contents</th>-->
-<!--            <th>Size</th>-->
-<!--        </tr>-->
-<!---->
-<!--        --><?php
-//        //create a while loop here to insert one row for each message.
-//        while(($row = $query->fetch_assoc()) !== NULL){
-//            echo "<tr>";
-//            echo "<td class='packslistname'>", $row['name'], "</td>";
-//            echo "<td>", $row['description'], "</td>";
-//            echo "<td>", $row['contents'], "</td>";
-//            echo "<td>", $row['size'], "</td>";
-//            echo "</tr>";
-//        }
-//        ?>
-<!--    </table>-->
-<!--    </div>-->
-<!--    </div>-->
 
-<!--    <div class="hero">-->
+
         <?php
         //create a while loop here to insert one row for each pack.
         //insert a row for each record from query result
         while (($row = $query->fetch_assoc()) !== NULL) {
             echo "<div class='hero'>";
             echo "<div class='herocontainer'>";
-            echo "<div class='heroimg2'></div>";
+            echo "<div class='heroimg2'><img class='heroimg2' src='images/" . $row['image'] ."?>' ></div>";
             echo "<div class='herotxt2'><h1>", $row['name'],"</h1>";
-            echo "<a href='addtocart.php?id=$pack_id'",
+            echo "<a href='addtocart.php?id=$pack_id'>",
             "<div class='addtocart'>ADD TO CART</div></a>";
             echo "</div>";
             echo "</div>";
