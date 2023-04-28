@@ -71,11 +71,14 @@ if (!$query) {
             echo "</div>";
         }
 
-        if ($role == 1) {
-            echo "<div><a href='createpack.php'>Add Pack</a></div>";
-        }
         ?>
     </div>
+
+<?php
+if ($role == 1) {
+    echo "<div class='addpack'><div class='packsbtn1'><a href='createpack.php'>Add Pack</a></div></div>";
+}
+?>
 
 <?php
 // clean up resultsets when we're done with them!

@@ -8,16 +8,16 @@
  */
 
 $page_title = "Shopping Cart";
-require_once ('includes/header.php');
+require_once('includes/header.php');
 require_once('includes/database.php');
 ?>
-    <h2>My Shopping Cart</h2>
+    <h2 class="carth2">My Shopping Cart</h2>
 <?php
 
 
 if (!isset($_SESSION['cart']) || !$_SESSION['cart']) {
-    echo "Your shopping cart is empty.<br><br>";
-    include ('includes/footer.php');
+    echo "<h2 class='carth'>Your shopping cart is empty.<br><br></h2>";
+    include('includes/footer.php');
     exit();
 }
 
@@ -26,8 +26,9 @@ if (!isset($_SESSION['cart']) || !$_SESSION['cart']) {
 $cart = $_SESSION['cart'];
 
 ?>
-    <table class="booklist">
+    <table class="tablecart">
         <tr>
+            <th style="width: 200px"></th>
             <th style="width: 200px">Name</th>
             <th style="width: 60px">Price</th>
             <th style="width: 60px">Quantity</th>
@@ -36,7 +37,7 @@ $cart = $_SESSION['cart'];
         //insert code to display the shopping cart content
 
         //select statement
-        $sql = "SELECT pack_id, name, price FROM packs WHERE 0";
+        $sql = "SELECT pack_id, image, name, price FROM packs WHERE 0";
 
         foreach (array_keys($cart) as $pack_id) {
             $sql .= " OR pack_id=$pack_id";
@@ -56,6 +57,7 @@ $cart = $_SESSION['cart'];
             $total = $qty * $price;
             $ovrtotal += $total;
             echo "<tr>",
+                "<td><img class='cartimage' src='images/" . $row['image'] . "?>' ></td>",
             "<td><a href='packsdetails.php?id=$pack_id'>$name</a></td>",
             "<td>$$price</td>",
             "<td>$qty</td>",
@@ -64,14 +66,16 @@ $cart = $_SESSION['cart'];
         ?>
     </table>
 <?php
-echo "<div>$$ovrtotal</div>";
+echo "<div class='total'>Total:<div class='totalnum'>&nbsp$$ovrtotal</div></div>";
 ?>
     <br>
-    <div class="bookstore-button">
-        <input type="button" value="Checkout" onclick="window.location.href = 'checkout.php'"/>
-        <input type="button" value="Cancel" onclick="window.location.href = 'listpacks.php'" />
+    <div class="totalbtns">
+        <div class="totalbtns2">
+            <input type="button" value="Cancel" onclick="window.location.href = 'listpacks.php'"/>
+            <input class="checkout" type="button" value="Checkout" onclick="window.location.href = 'checkout.php'"/>
+        </div>
     </div>
     <br><br>
 
 <?php
-include ('includes/footer.php');
+include('includes/footer.php');

@@ -69,9 +69,9 @@ if(!$query->num_rows) {
             $row['size'],"</h2><p>";
             echo "<div class='back'><a href='listpacks.php'>< Back to packs</a></div>";
             if ($role == 1){
-                echo "<p><a href=editpack.php?id=", $row['pack_id'], ">",
+                echo "<p class='editdeletepack'><a href=editpack.php?id=", $row['pack_id'], ">",
                 "Edit Pack</a></h1>";
-                echo "<p><a href=deletepack.php?id=", $row['pack_id'], ">",
+                echo "<p class='editdeletepack'><a href=deletepack.php?id=", $row['pack_id'], ">",
                 "Delete Pack</a></h1>";
             }
             echo "</div>";

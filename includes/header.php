@@ -18,7 +18,6 @@ if (session_status() == PHP_SESSION_NONE) {
     <div class="links">
         <a href="home.php">Home</a>
         <a href="listpacks.php">Packs</a>
-        <a href="">Contact</a>
     </div>
     <div class="icons">
         <a target="_self" href="searchpacks.php"><i class="fa-solid fa-magnifying-glass"></i>

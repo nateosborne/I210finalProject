@@ -52,40 +52,32 @@ if ($role == 1) {
 ?>
 
 <div class="account">
-    <div class="account-cont">
-        <div class="login">
+    <div class="account-cont2">
+        <div class="login2">
             <form method='post' action='login.php'>
-                <table>
+                <table class="newuser">
                     <tr>
-                        <td colspan="2"><?php echo $message; ?></br><br></td>
+                        <td class="accountmsg" colspan="2"><?php echo $message; ?></br><br></td>
                     </tr>
                     <tr>
-                        <td style="width: 80px">Email: </td>
-                        <td><input type='text' name='email' required></td>
+                        <td><input type='text' name='email' placeholder="Email" required></td>
                     </tr>
                     <tr>
-                        <td>Password: </td>
-                        <td><input type='password' name='password' required></td>
+                        <td><input type='password' name='password' placeholder="Password" required></td>
                     </tr>
                     <tr>
-                        <td colspan='2' style='padding: 10px 0 0 85px' class="bookstore-button">
-                            <input type='submit' value='  Login  '>
-                            <input type="submit" name="Cancel" value="Cancel" onclick="window.location.href = 'listpacks.php'" />
+                        <td>
+                            <input class="submit2" type='submit' value='  Login  '>
+                            <input class="submit2" type="submit" name="Cancel" value="Cancel" onclick="window.location.href = 'listpacks.php'" />
                         </td>
                     </tr>
                 </table>
             </form>
-<!--            <h1>Login</h1>-->
-<!--            <div class="inputs">-->
-<!--                <input class="submit1" type="email" placeholder="Email">-->
-<!--                <input class="submit1" type="password" placeholder="Password">-->
-<!--            </div>-->
-<!--        </div>-->
         <div class="createact"><a href="createuser.php">Create account</a></div>
+        </div>
     </div>
 </div>
 
-
-<?php
-require_once 'includes/footer.php';
-?>
+    <?php
+    require_once 'includes/footer.php';
+    ?>
